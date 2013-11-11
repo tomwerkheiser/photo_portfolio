@@ -1,0 +1,134 @@
+/*--------------------------------------------------
+
+Photography Page
+
+--------------------------------------------------*/
+
+.gallery-columns-4 {
+	width:95%;
+	margin:25px auto 0;
+	@include breakpoint(sm) {
+	 	margin:50px auto 0;
+	} 
+	 
+	.gallery-item {
+		display:inline-block;
+		margin:5px;
+		width:20%;
+		@include breakpoint(med) {
+		    width:22%;
+		}
+		@include breakpoint(lrg) {
+		    margin:10px;
+		}
+		&:nth-child(1n) {
+			@include breakpoint(med) {
+			    margin-left:10px;
+			}
+			 
+			@include breakpoint(lrg) {
+			    margin-left:15px;
+			}
+			 
+		}
+	}
+
+	img {
+		border:4px solid #d5d5d5;
+		max-width:100%;
+		height:auto; 
+	}
+
+	.gallery-caption {
+		margin-left:0;
+	}
+
+	.gallery-icon {
+		margin:0 auto;
+		width:100%;
+	}
+}
+
+.gallery-columns-1 {
+	width:100%;
+	margin:25px auto 0;
+	@include breakpoint(sm) {
+	 	margin:50px auto 0;
+	} 
+	 
+	.gallery-item {
+		display:block;
+		margin:5px;
+		@include breakpoint(lrg) {
+		    margin:10px;
+		}
+	}
+
+	img {
+		border:4px solid #d5d5d5;
+		max-width:100%;
+		height:auto;
+		display:block;
+		margin:0 auto;
+	}
+
+	.gallery-caption {
+		margin-left:0;
+	}
+}
+
+.entry-title {
+	margin-top:15px;
+	text-transform:capitalize;
+}
+
+p.attachment {
+	img {
+		display:block;
+		margin:30px auto;
+		max-width:100%;
+		height:auto;
+		border:3px solid #999;
+		@include breakpoint(med) {
+		    margin:50px auto;
+		}
+		 
+	}
+}
+
+.nav-below {
+	margin:15px 0;
+	overflow:auto;
+
+	.nav-previous{
+		float:left;
+	}
+
+	.nav-next {
+		float:right;
+	}
+
+	.nav-previous, .nav-next {
+		width:115px;
+		text-align:center;
+
+		a img {
+			display:block;
+			margin:0 auto;
+			border:2px solid #999;
+			margin-bottom:10px;
+		}
+	}
+}
+
+img.alignleft, img.alignright, img.aligncenter {
+    border: 4px solid #d5d5d5;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+.aligncenter, img.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,45 @@
+/*--------------------------------------------------
+
+Blog Page
+
+--------------------------------------------------*/
+
+.blog {
+	margin-top:35px;
+	@include breakpoint(lrg) {
+	    margin-top:75px;
+	}
+}
+
+article {
+	padding:25px 15px;
+	margin:15px 0;
+	@include breakpoint(sm) {
+	    padding:25px;
+	}
+	 @include breakpoint(lrg) {
+	     padding:25px 75px;
+	 }
+
+	h2 {
+		font-size:2em;
+		margin:15px 0;
+	}
+
+	.blogdate {
+		font-size:1em;
+		color:#aaa;
+		position:absolute;
+		bottom:3px;
+		right:10px;
+	}
+
+	.theContent {
+		padding:15px 0 30px;
+		border-bottom:2px solid #ddd;
+		@include breakpoint(sm) {
+		    padding:15px 15px 30px;
+		}
+		 
+	}
+}

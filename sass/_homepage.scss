@@ -1,0 +1,72 @@
+/*--------------------------------------------------
+
+Home Page 
+
+--------------------------------------------------*/
+
+.title {
+	font-size:1.4em;
+	margin-bottom:10px;
+	@include breakpoint(med) {
+	    font-size:1.8em;
+	}
+}
+
+.homePage {
+	margin: 0 0 20px 0;
+	padding:0 10px;
+	line-height:1.25em;
+	@include breakpoint(sm) {
+	    font-size:1.2em;
+	}
+	 
+	@include breakpoint(med) {
+	    font-size:1.4em;
+	    margin:35px 0;
+	}
+	 
+}
+
+.homeSlideshow {
+
+}
+
+
+
+/* 
+
+Slider
+
+*/
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  border:2px solid #999;
+}
+
+.rslides li {
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}

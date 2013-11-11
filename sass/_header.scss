@@ -1,0 +1,133 @@
+/*--------------------------------------------------
+
+Header 
+
+--------------------------------------------------*/
+
+header {
+	margin:15px 0 30px;
+
+	.siteName {
+		font-size:2em;
+		font-family: 'Habibi', serif;
+		@include breakpoint(sm) {
+		    font-size:2.2em;
+		}
+		@include breakpoint(med) {
+		    font-size:2.4em;
+		}
+		@include breakpoint(lrg) {
+		    font-size:2.6em;
+		}	 
+		
+		
+		a {
+			text-decoration:none;
+			color:#444;
+		}
+	}
+
+	nav {
+		@include breakpoint(lrg) {
+		    width:550px;
+		    position:absolute;
+		    top:15px;
+		    right:10px;
+		}
+		 
+	}
+
+	#nav ul {
+	  margin: 0 auto;
+	  padding: 0;
+	  width: 100%;
+	  display: block;
+	  list-style: none;
+	  @include breakpoint(sm) {
+	      width:420px;
+	  }
+	  @include breakpoint(med) {
+	      width:470px;
+	      margin:15px auto 0;
+	  }
+	  @include breakpoint(lrg) {
+	      margin:4px auto 0;
+	  }
+	   
+	   
+	   
+	}
+	#nav li {
+		display: block;
+		text-align:center;
+		font-size:1.2em;
+		margin:0.2em 0;
+		padding:0.3em 0;
+		font-family: 'Numans', sans-serif;
+		@include breakpoint(sm) {
+		    display:inline-block;
+		    font-size:0.95em;
+		    margin:0;
+		}
+		@include breakpoint(med) {
+		    font-size:1.1em;
+		}
+
+		&.current-menu-item a, &.current_page_item a, &.current_page_parent a {
+			border-bottom:2px solid #BD600F;
+		}
+		 
+		 
+		 a {
+		 	text-decoration:none;
+		 	color:#333;
+		 	@include breakpoint(sm) {
+		 	    padding:5px 10px;
+		 	}
+
+
+		 	&:hover {
+		 		border-bottom:2px solid #BD600F;
+		 	} 
+		 }
+	}	
+}
+
+
+.js #nav {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+#nav.opened {
+  max-height: 9999px;
+}
+
+#nav-toggle {
+	text-decoration:none;
+	border:1px solid #000;
+	border-radius:4px;
+	color:#eee;
+	padding:4px 10px;
+	text-decoration:none;
+	background:#333;
+	width:60px;
+	display:block;
+	margin:15px auto 0;
+	text-align:center;
+}
+
+
+@media screen and (min-width: 525px) {
+  .js #nav {
+    position: relative;
+    max-height: none;
+  }
+  #nav-toggle {
+    display: none;
+  }
+}
