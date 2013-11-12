@@ -1,4 +1,4 @@
 Photo Portfolio
 ==============
 
-Photo portfolio for http://tomwerkheiser.com
+Photo portfolio theme for WordPress. http://tomwerkheiser.com
